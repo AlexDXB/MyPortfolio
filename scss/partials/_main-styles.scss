@@ -1,0 +1,161 @@
+body {
+    margin:0 auto;
+}
+.main-container {
+    background-color: $color-primary;
+    height: 1000px;
+    margin:0 auto;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    border-bottom: 5px solid $color-bright;
+    .nav-container {
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem;
+        align-items:center;
+        text-align: center;
+    }
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items:center;
+    font-size: 1.6rem;
+    li {
+        padding: 20px;
+        font-family: 'Noto Sans', sans-serif;
+        text-align: center;
+        align-self:center; 
+    }
+}
+li:nth-child(2), 
+li:nth-child(3),
+input::placeholder {
+    color:$color-text-secondary;
+}
+li:first-child {
+    color:$color-text;
+}
+ 
+input {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(61,62,66,255);
+    border: 0px solid;
+ } 
+ input::placeholder {
+    padding-left: 20px;
+    font-size: 1.6rem;
+    color:$color-bright;
+} 
+.iam {
+    display: flex;
+    justify-content: center;
+    .main-img {
+        max-width: 700px;
+        margin-left: 100px;
+    }
+}
+.name {
+   margin-top: 200px;
+   margin-left: 100px;
+   h2 {
+    font-size: 2.2rem;
+    color:$color-text;
+    font-family: $font-stack-primary;
+   } 
+}
+h3 {
+    font-size: 2.2rem;
+    color:$color-text;
+    font-family: $font-stack-primary;
+} 
+.bold {
+    font-size: 3.3rem;
+    color:$color-bright;
+}
+.contact-btn {
+    font-size: 1.5rem;
+    background-color: transparent;
+    color:$color-bright;
+    border: 5px solid $color-bright;
+    border-radius: 7px;
+    height: 4rem;
+    font-family: $font-stack-primary;
+    width: 200px;
+}
+.gmail,
+.github,
+.linkedin {
+    fill:$color-text;
+}
+.line {
+    border-top: 2px solid $color-bright;
+}
+
+/////////////////////////// ABOUT //////////////////////////////////////
+
+.about-container {
+    background-color:rgba(50,51,59,255);
+    padding: 4rem;
+   
+}
+.about-text h1,
+.sills-text h1,
+.portfolio-text h1,
+.about-text p {
+    font-size: 3.3rem;
+    color:$color-text;
+    font-family: $font-stack-primary;
+    
+}
+.about-text p{
+    font-size: 1.5rem;
+}
+.linebeforetext {
+    display: flex;
+    justify-content:space-between;
+    p {
+        flex: 1 1 auto;
+        margin-top: 0;
+    }
+    .line2 {
+        flex: 0 0 60px;
+        border-top: 3px solid $color-bright;
+        margin-right: 10px;
+    }
+}
+//////////////////////////////// MY SKILLS //////////////////////////
+
+.skills-container {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+.card-container {
+    display: grid;
+    max-width: 80%;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(3,300px);
+    margin: 0 auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    padding: 10px;
+    .skills-cards {
+        background-color: $color-primary;
+        border-radius: 20px;
+        img {
+            width:120px;
+            height: 120px;
+            margin: 2rem;
+        }
+        &:hover{
+            background-color: #EC994B;
+            transition-duration: 0.8s;
+        }
+    }
+}
