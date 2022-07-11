@@ -425,7 +425,15 @@ footer {
             width: 200px;
         }
     }
+    footer {
+        font-size: 2rem;
+    }
     
+}
+@media (max-width:580px) {
+    footer {
+        font-size: 1.5rem;
+    }
 }
 @media (max-width:530px) {
 
@@ -512,9 +520,7 @@ footer {
             }
         }
     }
-    footer {
-        font-size: 1.5rem;
-    }
+   
      
    
 }
