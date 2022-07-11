@@ -1,8 +1,11 @@
+html{
+    scroll-behavior: smooth;
+}
 body {
     margin:0 auto;
 }
 .main-container {
-    background-color: $color-primary;
+    background: linear-gradient(to bottom,$color-primary ,$color-secondary);
     height: 1000px;
     margin:0 auto;
     display: flex;
@@ -16,6 +19,15 @@ body {
         text-align: center;
     }
 }
+.icons svg:hover{
+    fill: $color-bright;
+    transition: 0.1s;
+    transform: scale(1.5);
+    
+}
+.icons svg path:hover {
+    fill: $color-bright;
+}
 
 ul {
     display: flex;
@@ -25,9 +37,13 @@ ul {
     font-size: 1.6rem;
     li {
         padding: 20px;
-        font-family: 'Noto Sans', sans-serif;
+        font-family: $font-stack-secondary;
         text-align: center;
-        align-self:center; 
+        align-self:center;
+        &:hover {
+            color: $color-bright;
+            transition: 0.5s ease-out;
+        } 
     }
 }
 li:nth-child(2), 
@@ -45,11 +61,14 @@ input {
     border-radius: 10px;
     background-color: $color-secondary;
     border: 0px solid;
+    outline: none;
+    font-size: 1.2rem;
+    color: $color-text;
  } 
  input::placeholder {
     padding-left: 20px;
-    font-size: 1.6rem;
-    color:$color-bright;
+    font-size: 1.3rem;
+    
 } 
 .iam {
     display: flex;
@@ -86,6 +105,12 @@ h3 {
     height: 4rem;
     font-family: $font-stack-primary;
     width: 200px;
+    &:hover {
+        color:$color-primary;
+        background-color:$color-bright;
+        transition-duration: 0.8s;
+        
+    }
 }
 .gmail,
 .github,
@@ -99,6 +124,7 @@ h3 {
 /////////////////////////// ABOUT //////////////////////////////////////
 
 .about-container {
+    background: linear-gradient(to bottom,$color-secondary ,$color-primary);
     background-color:$color-secondary;
     padding: 4rem;
 }
@@ -109,7 +135,13 @@ h3 {
     font-size: 3.3rem;
     color:$color-text;
     font-family: $font-stack-primary;
-    
+}
+.about-text h1,
+.experiance h1,
+.contact h1,
+.skills-container h1,
+.portfolio-text h1 {
+    text-shadow: 0 0 0.5rem $color-bright; 
 }
 .about-text p{
     font-size: 1.5rem;
@@ -182,7 +214,7 @@ h3 {
 }
 ////////////////////////// Experiance /////////////////////////
 .experiance {
-    background-color: $color-primary;
+    background: linear-gradient(to bottom,$color-primary ,$color-secondary);
     position: relative;
     padding: 4rem;
     h1 {
@@ -191,6 +223,7 @@ h3 {
         top:-35px;
         font-size: 3.3rem;
         color: $color-text;
+        font-family: $font-stack-primary;
     }
 }
 .timeline{
@@ -204,6 +237,7 @@ h3 {
         padding: 0 3rem;
         h2 {
             margin: 0;
+            font-family: $font-stack-primary;
         }
     }
 }
@@ -215,13 +249,16 @@ h3 {
         font-size: 2.3rem;
         margin: 0;
         color: $color-text; 
+        font-family: $font-stack-primary;
     }
     h3 {
-        color: $color-text; 
+        color: $color-text;
+        font-family: $font-stack-primary; 
     }
     p {
         font-size: 1.3rem;
         color: $color-text-secondary;
+        font-family: $font-stack-secondary;
     }
 }
 .right h2::before {
@@ -241,7 +278,7 @@ h3 {
 
 
 .contact{
-    background-color: $color-secondary;
+    background: linear-gradient(to bottom,$color-secondary ,$color-primary);
     position: relative;
     padding: 4rem;
     h1 {
@@ -250,6 +287,7 @@ h3 {
         top:-35px;
         font-size: 3.3rem;
         color: $color-text;
+        font-family: $font-stack-primary;
     }
     .social {
         display: flex;
@@ -268,6 +306,7 @@ h3 {
             height: 100px;
             border-radius: 10px;
             align-items:center;
+            
         }
         .box2 {
             flex: 0 1 350px;
@@ -278,6 +317,7 @@ h3 {
             margin:10px;
             align-items:center;
             border-radius: 10px;
+            
         }
         .box3{
             flex: 0 1 350px;
@@ -288,6 +328,7 @@ h3 {
             align-items:center;
             margin:10px;
             border-radius: 10px;
+            
         }
     }
 }
@@ -295,6 +336,7 @@ h3 {
     margin-left: 1rem;
     font-size: 1.4rem;
     color:$color-bright;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .icons-bottom {
@@ -312,12 +354,168 @@ h3 {
 /////////////////////////// Footer ///////////////////////
 
 footer {
+    background: linear-gradient(to bottom,$color-primary ,$color-secondary);
     height:300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $color-primary;
     font-size: 2.5rem;
     color:$color-bright;
+    font-family: $font-stack-primary;
 }
 
+//////////////////////////////// Mobile layout /////////////////
+
+
+@media (max-width:1200px) {
+    
+    input {
+       display: none;
+    }
+    .main-container .nav-container {
+        flex-direction: column-reverse;
+        padding: 0 2rem;
+    }
+    
+    
+    
+    
+    .iam {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center;
+        .main-img {
+            max-width: 400px;
+            margin: 0;
+            margin-top: 70px;
+        }
+        .name {
+            margin: 0;
+        }
+    }
+    .card-container {
+        grid-template-columns: repeat(2,300px);
+        grid-template-rows: (5,300px);
+    }
+    .portfolio-container .img-container {
+        grid-template-columns: repeat(2, 350px);
+        grid-template-rows: repeat(3,350px);
+    }
+}
+
+@media (max-width:864px) {
+    .card-container {
+        grid-template-columns: repeat(2,150px);
+        grid-template-rows: repeat(5,150px);
+        .skills-cards img {
+            width: 60px;
+            height: 60px;
+            margin: .5rem 0 0 0;
+        }
+        .skills-cards h3 {
+            font-size: 1.5rem;
+            
+        }
+    }
+    .portfolio-container .img-container {
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(3,200px);
+        .portfolio-cards img {
+            height: 200px;
+            width: 200px;
+        }
+    }
+    
+}
+@media (max-width:530px) {
+
+
+    .main-container .nav-container,
+    .icons-bottom {
+        padding-left: 0;
+    }
+
+    .name .bold,
+    .name h2,
+    .name h3{
+        font-size: 1.5rem;
+    }
+    .name .contact-btn {
+        height: 2rem;
+        width:100px;
+        font-size: .7rem;
+        border: 2px solid $color-bright;
+    }
+    ul {
+        font-size: 1rem;
+    }
+   
+   .iam .main-img {
+        max-width: 250px;
+        margin: 0;
+        margin-top: 70px;
+    }
+    .main-container {
+        height: 700px;
+    }
+    .card-container {
+        grid-template-columns: repeat(2,100px);
+        grid-template-rows: repeat(5,100px);
+        .skills-cards img {
+            width: 30px;
+            height: 30px;
+            margin: .5rem 0 0 0;
+        }
+        .skills-cards h3 {
+            font-size: 1.1rem;
+            
+        }
+    }
+    .about-text h1,
+    .sills-text h1,
+    .portfolio-text h1,
+    .contact h1,
+    .experiance h1{
+    font-size: 2rem;
+    }
+    .about-text p {
+        font-size: 1rem;
+    }
+    .portfolio-container .img-container {
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: repeat(3,100px);
+        .portfolio-cards img {
+            height: 100px;
+            width: 100px;
+        }
+    }
+   
+    .experiance {
+        padding-right: 0;
+    }
+    .timeline {
+        margin: 2rem 0;
+        grid-template-columns: 1fr 3fr;
+        .right {
+            padding: 0 1.5rem;
+            h2 {
+                font-size: 1.8rem;
+            }
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+        .left {
+            padding: 0 1.5rem 0 0;
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    footer {
+        font-size: 1.5rem;
+    }
+     
+   
+}
+    

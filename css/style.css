@@ -1,9 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0 auto;
 }
 
 .main-container {
-  background-color: rgb(52, 53, 58);
+  background: linear-gradient(to bottom, rgb(52, 53, 58), rgb(48, 49, 59));
   height: 1000px;
   margin: 0 auto;
   display: flex;
@@ -18,6 +22,16 @@ body {
   text-align: center;
 }
 
+.icons svg:hover {
+  fill: rgb(255, 200, 107);
+  transition: 0.1s;
+  transform: scale(1.5);
+}
+
+.icons svg path:hover {
+  fill: rgb(255, 200, 107);
+}
+
 ul {
   display: flex;
   list-style-type: none;
@@ -30,6 +44,10 @@ ul li {
   font-family: "Noto Sans", sans-serif;
   text-align: center;
   align-self: center;
+}
+ul li:hover {
+  color: rgb(255, 200, 107);
+  transition: 0.5s ease-out;
 }
 
 li:nth-child(2),
@@ -46,14 +64,16 @@ input {
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  background-color: rgb(50, 51, 59);
+  background-color: rgb(48, 49, 59);
   border: 0px solid;
+  outline: none;
+  font-size: 1.2rem;
+  color: rgb(235, 235, 237);
 }
 
 input::placeholder {
   padding-left: 20px;
-  font-size: 1.6rem;
-  color: rgb(255, 200, 107);
+  font-size: 1.3rem;
 }
 
 .iam {
@@ -96,6 +116,11 @@ h3 {
   font-family: "Roboto", sans-serif;
   width: 200px;
 }
+.contact-btn:hover {
+  color: rgb(52, 53, 58);
+  background-color: rgb(255, 200, 107);
+  transition-duration: 0.8s;
+}
 
 .gmail,
 .github,
@@ -108,7 +133,8 @@ h3 {
 }
 
 .about-container {
-  background-color: rgb(50, 51, 59);
+  background: linear-gradient(to bottom, rgb(48, 49, 59), rgb(52, 53, 58));
+  background-color: rgb(48, 49, 59);
   padding: 4rem;
 }
 
@@ -119,6 +145,14 @@ h3 {
   font-size: 3.3rem;
   color: rgb(235, 235, 237);
   font-family: "Roboto", sans-serif;
+}
+
+.about-text h1,
+.experiance h1,
+.contact h1,
+.skills-container h1,
+.portfolio-text h1 {
+  text-shadow: 0 0 0.5rem rgb(255, 200, 107);
 }
 
 .about-text p {
@@ -192,7 +226,7 @@ h3 {
 }
 
 .experiance {
-  background-color: rgb(52, 53, 58);
+  background: linear-gradient(to bottom, rgb(52, 53, 58), rgb(48, 49, 59));
   position: relative;
   padding: 4rem;
 }
@@ -202,6 +236,7 @@ h3 {
   top: -35px;
   font-size: 3.3rem;
   color: rgb(235, 235, 237);
+  font-family: "Roboto", sans-serif;
 }
 
 .timeline {
@@ -217,6 +252,7 @@ h3 {
 }
 .timeline .left h2 {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .right {
@@ -228,13 +264,16 @@ h3 {
   font-size: 2.3rem;
   margin: 0;
   color: rgb(235, 235, 237);
+  font-family: "Roboto", sans-serif;
 }
 .right h3 {
   color: rgb(235, 235, 237);
+  font-family: "Roboto", sans-serif;
 }
 .right p {
   font-size: 1.3rem;
   color: rgb(129, 130, 131);
+  font-family: "Noto Sans", sans-serif;
 }
 
 .right h2::before {
@@ -250,7 +289,7 @@ h3 {
 }
 
 .contact {
-  background-color: rgb(50, 51, 59);
+  background: linear-gradient(to bottom, rgb(48, 49, 59), rgb(52, 53, 58));
   position: relative;
   padding: 4rem;
 }
@@ -260,6 +299,7 @@ h3 {
   top: -35px;
   font-size: 3.3rem;
   color: rgb(235, 235, 237);
+  font-family: "Roboto", sans-serif;
 }
 .contact .social {
   display: flex;
@@ -305,6 +345,7 @@ h3 {
   margin-left: 1rem;
   font-size: 1.4rem;
   color: rgb(255, 200, 107);
+  font-family: "Noto Sans", sans-serif;
 }
 
 .icons-bottom {
@@ -318,13 +359,150 @@ h3 {
 }
 
 footer {
+  background: linear-gradient(to bottom, rgb(52, 53, 58), rgb(48, 49, 59));
   height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(52, 53, 58);
   font-size: 2.5rem;
   color: rgb(255, 200, 107);
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 1200px) {
+  input {
+    display: none;
+  }
+  .main-container .nav-container {
+    flex-direction: column-reverse;
+    padding: 0 2rem;
+  }
+  .iam {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .iam .main-img {
+    max-width: 400px;
+    margin: 0;
+    margin-top: 70px;
+  }
+  .iam .name {
+    margin: 0;
+  }
+  .card-container {
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: 5, 300px;
+  }
+  .portfolio-container .img-container {
+    grid-template-columns: repeat(2, 350px);
+    grid-template-rows: repeat(3, 350px);
+  }
+}
+@media (max-width: 864px) {
+  .card-container {
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(5, 150px);
+  }
+  .card-container .skills-cards img {
+    width: 60px;
+    height: 60px;
+    margin: 0.5rem 0 0 0;
+  }
+  .card-container .skills-cards h3 {
+    font-size: 1.5rem;
+  }
+  .portfolio-container .img-container {
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(3, 200px);
+  }
+  .portfolio-container .img-container .portfolio-cards img {
+    height: 200px;
+    width: 200px;
+  }
+}
+@media (max-width: 530px) {
+  .main-container .nav-container,
+.icons-bottom {
+    padding-left: 0;
+  }
+  .name .bold,
+.name h2,
+.name h3 {
+    font-size: 1.5rem;
+  }
+  .name .contact-btn {
+    height: 2rem;
+    width: 100px;
+    font-size: 0.7rem;
+    border: 2px solid rgb(255, 200, 107);
+  }
+  ul {
+    font-size: 1rem;
+  }
+  .iam .main-img {
+    max-width: 250px;
+    margin: 0;
+    margin-top: 70px;
+  }
+  .main-container {
+    height: 700px;
+  }
+  .card-container {
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(5, 100px);
+  }
+  .card-container .skills-cards img {
+    width: 30px;
+    height: 30px;
+    margin: 0.5rem 0 0 0;
+  }
+  .card-container .skills-cards h3 {
+    font-size: 1.1rem;
+  }
+  .about-text h1,
+.sills-text h1,
+.portfolio-text h1,
+.contact h1,
+.experiance h1 {
+    font-size: 2rem;
+  }
+  .about-text p {
+    font-size: 1rem;
+  }
+  .portfolio-container .img-container {
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(3, 100px);
+  }
+  .portfolio-container .img-container .portfolio-cards img {
+    height: 100px;
+    width: 100px;
+  }
+  .experiance {
+    padding-right: 0;
+  }
+  .timeline {
+    margin: 2rem 0;
+    grid-template-columns: 1fr 3fr;
+  }
+  .timeline .right {
+    padding: 0 1.5rem;
+  }
+  .timeline .right h2 {
+    font-size: 1.8rem;
+  }
+  .timeline .right h3 {
+    font-size: 1.5rem;
+  }
+  .timeline .left {
+    padding: 0 1.5rem 0 0;
+  }
+  .timeline .left h2 {
+    font-size: 1.5rem;
+  }
+  footer {
+    font-size: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
