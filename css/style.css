@@ -523,5 +523,28 @@ footer h2 {
     font-size: 0.8rem;
   }
 }
+@media (max-width: 320px) {
+  .card-container {
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(5, 100px);
+    padding: 0;
+  }
+  .card-container .skills-cards img {
+    width: 40px;
+    height: 40px;
+    margin: 0.5rem 0 0 0;
+  }
+  .card-container .skills-cards h3 {
+    font-size: 1.1rem;
+  }
+  .portfolio-container .img-container {
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(3, 100px);
+  }
+  .portfolio-container .img-container .portfolio-cards img {
+    height: 100px;
+    width: 100px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
