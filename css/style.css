@@ -7,7 +7,7 @@ body {
 }
 
 .main-container {
-  background: linear-gradient(to bottom, rgb(52, 53, 58), rgb(48, 49, 59));
+  background: linear-gradient(to bottom, #222831, #393E46);
   height: 1000px;
   margin: 0 auto;
   display: flex;
@@ -22,13 +22,15 @@ body {
   text-align: center;
 }
 
-.icons svg:hover {
+.icons svg:hover,
+.icons-bottom svg:hover {
   fill: rgb(255, 200, 107);
   transition: 0.1s;
   transform: scale(1.5);
 }
 
-.icons svg path:hover {
+.icons svg path:hover,
+.icons-bottom svg path:hover {
   fill: rgb(255, 200, 107);
 }
 
@@ -39,41 +41,18 @@ ul {
   align-items: center;
   font-size: 1.6rem;
 }
-ul li {
+ul li a {
+  text-decoration: none;
   padding: 20px;
   font-family: "Noto Sans", sans-serif;
   text-align: center;
   align-self: center;
+  color: rgb(235, 235, 237);
 }
-ul li:hover {
+ul li a:hover {
   color: rgb(255, 200, 107);
   transition: 0.5s ease-out;
-}
-
-li:nth-child(2),
-li:nth-child(3),
-input::placeholder {
-  color: rgb(129, 130, 131);
-}
-
-li:first-child {
-  color: rgb(235, 235, 237);
-}
-
-input {
-  width: 200px;
-  height: 50px;
-  border-radius: 10px;
-  background-color: rgb(48, 49, 59);
-  border: 0px solid;
-  outline: none;
-  font-size: 1.2rem;
-  color: rgb(235, 235, 237);
-}
-
-input::placeholder {
-  padding-left: 20px;
-  font-size: 1.3rem;
+  cursor: pointer;
 }
 
 .iam {
@@ -117,9 +96,10 @@ h3 {
   width: 200px;
 }
 .contact-btn:hover {
-  color: rgb(52, 53, 58);
+  color: #222831;
   background-color: rgb(255, 200, 107);
   transition-duration: 0.8s;
+  cursor: pointer;
 }
 
 .gmail,
@@ -133,8 +113,8 @@ h3 {
 }
 
 .about-container {
-  background: linear-gradient(to bottom, rgb(48, 49, 59), rgb(52, 53, 58));
-  background-color: rgb(48, 49, 59);
+  background: linear-gradient(to bottom, #393E46, #222831);
+  background-color: #393E46;
   padding: 4rem;
 }
 
@@ -190,7 +170,7 @@ h3 {
   padding: 10px;
 }
 .card-container .skills-cards {
-  background-color: rgb(52, 53, 58);
+  background-color: #222831;
   border-radius: 20px;
 }
 .card-container .skills-cards img {
@@ -201,6 +181,7 @@ h3 {
 .card-container .skills-cards:hover {
   background-color: #EC994B;
   transition-duration: 0.8s;
+  cursor: pointer;
 }
 
 .portfolio-container {
@@ -226,7 +207,7 @@ h3 {
 }
 
 .experiance {
-  background: linear-gradient(to bottom, rgb(52, 53, 58), rgb(48, 49, 59));
+  background: linear-gradient(to bottom, #222831, #393E46);
   position: relative;
   padding: 4rem;
 }
@@ -289,7 +270,7 @@ h3 {
 }
 
 .contact {
-  background: linear-gradient(to bottom, rgb(48, 49, 59), rgb(52, 53, 58));
+  background: linear-gradient(to bottom, #393E46, #222831);
   position: relative;
   padding: 4rem;
 }
@@ -312,7 +293,7 @@ h3 {
 .contact .social .box1 {
   flex: 0 1 350px;
   margin: 10px;
-  background-color: rgb(52, 53, 58);
+  background-color: #222831;
   text-align: center;
   align-self: center;
   display: flex;
@@ -320,10 +301,13 @@ h3 {
   border-radius: 10px;
   align-items: center;
 }
+.contact .social .box1 a {
+  padding-right: 0.5rem;
+}
 .contact .social .box2 {
   flex: 0 1 350px;
   text-align: center;
-  background-color: rgb(52, 53, 58);
+  background-color: #222831;
   display: flex;
   height: 100px;
   margin: 10px;
@@ -332,7 +316,7 @@ h3 {
 }
 .contact .social .box3 {
   flex: 0 1 350px;
-  background-color: rgb(52, 53, 58);
+  background-color: #222831;
   text-align: center;
   display: flex;
   height: 100px;
@@ -341,11 +325,17 @@ h3 {
   border-radius: 10px;
 }
 
-.social p {
+.social p,
+.social a {
   margin-left: 1rem;
   font-size: 1.4rem;
   color: rgb(255, 200, 107);
   font-family: "Noto Sans", sans-serif;
+  text-decoration: none;
+}
+.social p:hover,
+.social a:hover {
+  transform: scale(1.1);
 }
 
 .icons-bottom {
@@ -359,7 +349,7 @@ h3 {
 }
 
 footer {
-  background: linear-gradient(to bottom, rgb(52, 53, 58), rgb(48, 49, 59));
+  background: linear-gradient(to bottom, #222831, #393E46);
   height: 300px;
   display: flex;
   justify-content: center;
@@ -370,9 +360,6 @@ footer {
 }
 
 @media (max-width: 1200px) {
-  input {
-    display: none;
-  }
   .main-container .nav-container {
     flex-direction: column-reverse;
     padding: 0 2rem;
@@ -430,6 +417,10 @@ footer {
   }
 }
 @media (max-width: 530px) {
+  .contact,
+.about-container {
+    padding: 2rem 0 0 0.2rem;
+  }
   .main-container .nav-container,
 .icons-bottom {
     padding-left: 0;
@@ -457,12 +448,13 @@ footer {
     height: 700px;
   }
   .card-container {
-    grid-template-columns: repeat(2, 100px);
-    grid-template-rows: repeat(5, 100px);
+    grid-template-columns: repeat(2, 140px);
+    grid-template-rows: repeat(5, 140px);
+    padding: 0;
   }
   .card-container .skills-cards img {
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     margin: 0.5rem 0 0 0;
   }
   .card-container .skills-cards h3 {
@@ -477,17 +469,21 @@ footer {
   }
   .about-text p {
     font-size: 1rem;
+    color: rgb(129, 130, 131);
   }
   .portfolio-container .img-container {
-    grid-template-columns: repeat(2, 100px);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(3, 150px);
   }
   .portfolio-container .img-container .portfolio-cards img {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
   }
   .experiance {
-    padding-right: 0;
+    padding: 2rem 0 2rem 0.2rem;
+  }
+  .experiance h1 {
+    top: -10px;
   }
   .timeline {
     margin: 2rem 0;
@@ -502,11 +498,19 @@ footer {
   .timeline .right h3 {
     font-size: 1.5rem;
   }
+  .timeline .right p {
+    font-size: 1rem;
+  }
   .timeline .left {
     padding: 0 1.5rem 0 0;
   }
   .timeline .left h2 {
     font-size: 1.5rem;
+  }
+  .box1 a,
+.box2 p,
+.box3 p {
+    font-size: 1rem;
   }
 }
 

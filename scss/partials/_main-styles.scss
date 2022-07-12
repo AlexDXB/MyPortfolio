@@ -19,57 +19,36 @@ body {
         text-align: center;
     }
 }
-.icons svg:hover{
+.icons svg:hover,
+.icons-bottom svg:hover{
     fill: $color-bright;
     transition: 0.1s;
     transform: scale(1.5);
-    
 }
-.icons svg path:hover {
+.icons svg path:hover,
+.icons-bottom svg path:hover {
     fill: $color-bright;
 }
-
 ul {
     display: flex;
     list-style-type: none;
     justify-content: space-between;
     align-items:center;
     font-size: 1.6rem;
-    li {
+    li a{
+        text-decoration: none;
         padding: 20px;
         font-family: $font-stack-secondary;
         text-align: center;
         align-self:center;
+        color:$color-text;
         &:hover {
             color: $color-bright;
             transition: 0.5s ease-out;
+            cursor: pointer;
         } 
     }
 }
-li:nth-child(2), 
-li:nth-child(3),
-input::placeholder {
-    color:$color-text-secondary;
-}
-li:first-child {
-    color:$color-text;
-}
- 
-input {
-    width: 200px;
-    height: 50px;
-    border-radius: 10px;
-    background-color: $color-secondary;
-    border: 0px solid;
-    outline: none;
-    font-size: 1.2rem;
-    color: $color-text;
- } 
- input::placeholder {
-    padding-left: 20px;
-    font-size: 1.3rem;
-    
-} 
 .iam {
     display: flex;
     justify-content: center;
@@ -109,7 +88,7 @@ h3 {
         color:$color-primary;
         background-color:$color-bright;
         transition-duration: 0.8s;
-        
+        cursor: pointer;
     }
 }
 .gmail,
@@ -186,6 +165,7 @@ h3 {
         &:hover{
             background-color: #EC994B;
             transition-duration: 0.8s;
+            cursor: pointer;
         }
     }
 }
@@ -207,9 +187,7 @@ h3 {
             height: 350px;
             width: 350px;
             border-radius: 10px;
-
         }
-        
     }
 }
 ////////////////////////// Experiance /////////////////////////
@@ -306,7 +284,9 @@ h3 {
             height: 100px;
             border-radius: 10px;
             align-items:center;
-            
+            a {
+            padding-right: .5rem;
+            }
         }
         .box2 {
             flex: 0 1 350px;
@@ -332,11 +312,16 @@ h3 {
         }
     }
 }
-.social p {
+.social p,
+.social a {
     margin-left: 1rem;
     font-size: 1.4rem;
     color:$color-bright;
     font-family: 'Noto Sans', sans-serif;
+    text-decoration: none;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .icons-bottom {
@@ -347,12 +332,8 @@ h3 {
     left: 0;
     right: 0;
     text-align: center;
-    
-
 }
-
 /////////////////////////// Footer ///////////////////////
-
 footer {
     background: linear-gradient(to bottom,$color-primary ,$color-secondary);
     height:300px;
@@ -366,20 +347,12 @@ footer {
 
 //////////////////////////////// Mobile layout /////////////////
 
-
 @media (max-width:1200px) {
     
-    input {
-       display: none;
-    }
     .main-container .nav-container {
         flex-direction: column-reverse;
         padding: 0 2rem;
     }
-    
-    
-    
-    
     .iam {
         flex-direction: column;
         justify-content: space-between;
@@ -436,8 +409,10 @@ footer {
     }
 }
 @media (max-width:530px) {
-
-
+    .contact,
+    .about-container {
+        padding: 2rem 0 0 .2rem;
+    }
     .main-container .nav-container,
     .icons-bottom {
         padding-left: 0;
@@ -467,11 +442,12 @@ footer {
         height: 700px;
     }
     .card-container {
-        grid-template-columns: repeat(2,100px);
-        grid-template-rows: repeat(5,100px);
+        grid-template-columns: repeat(2,140px);
+        grid-template-rows: repeat(5,140px);
+        padding: 0;
         .skills-cards img {
-            width: 30px;
-            height: 30px;
+            width: 60px;
+            height: 60px;
             margin: .5rem 0 0 0;
         }
         .skills-cards h3 {
@@ -488,18 +464,23 @@ footer {
     }
     .about-text p {
         font-size: 1rem;
+        color: $color-text-secondary;
     }
     .portfolio-container .img-container {
-        grid-template-columns: repeat(2, 100px);
-        grid-template-rows: repeat(3,100px);
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: repeat(3,150px);
         .portfolio-cards img {
-            height: 100px;
-            width: 100px;
+            height: 150px;
+            width: 150px;
         }
     }
    
     .experiance {
-        padding-right: 0;
+        padding:2rem 0 2rem 0.2rem;
+        h1 {
+            top: -10px;
+            
+        }
     }
     .timeline {
         margin: 2rem 0;
@@ -512,6 +493,9 @@ footer {
             h3 {
                 font-size: 1.5rem;
             }
+            p {
+                font-size: 1rem;
+            }
         }
         .left {
             padding: 0 1.5rem 0 0;
@@ -520,6 +504,13 @@ footer {
             }
         }
     }
+    .box1 a,
+    .box2 p,
+    .box3 p {
+        font-size: 1rem;
+    }
+    
+    
    
      
    
