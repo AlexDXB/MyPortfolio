@@ -297,7 +297,9 @@ h3 {
             margin:10px;
             align-items:center;
             border-radius: 10px;
-            
+            p {
+                padding-right: .5rem;
+                }
         }
         .box3{
             flex: 0 1 350px;
@@ -340,9 +342,14 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
     color:$color-bright;
     font-family: $font-stack-primary;
+    text-align: center;
+    h2 {
+        text-align: center;
+        align-self:center;
+        font-size: 2.3rem;
+    }
 }
 
 //////////////////////////////// Mobile layout /////////////////
@@ -398,13 +405,14 @@ footer {
             width: 200px;
         }
     }
-    footer {
+    footer h2{
         font-size: 2rem;
+
     }
     
 }
 @media (max-width:580px) {
-    footer {
+    footer h2{
         font-size: 1.5rem;
     }
 }
@@ -505,9 +513,11 @@ footer {
         }
     }
     .box1 a,
-    .box2 p,
     .box3 p {
         font-size: 1rem;
+    }
+    .box2 p {
+        font-size: .8rem;
     }
     
     
