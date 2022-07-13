@@ -4,6 +4,7 @@ html {
 
 body {
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .main-container {
@@ -73,6 +74,12 @@ ul li a:hover {
   color: rgb(235, 235, 237);
   font-family: "Roboto", sans-serif;
 }
+.name a {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+}
 
 h3 {
   font-size: 2.2rem;
@@ -86,14 +93,17 @@ h3 {
 }
 
 .contact-btn {
-  font-size: 1.5rem;
   background-color: transparent;
   color: rgb(255, 200, 107);
   border: 5px solid rgb(255, 200, 107);
   border-radius: 7px;
   height: 4rem;
   font-family: "Roboto", sans-serif;
-  width: 200px;
+  text-decoration: none;
+}
+.contact-btn h3 {
+  font-size: 1.8rem;
+  margin: auto;
 }
 .contact-btn:hover {
   color: #222831;
@@ -172,6 +182,8 @@ h3 {
 .card-container .skills-cards {
   background-color: #222831;
   border-radius: 20px;
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
 }
 .card-container .skills-cards img {
   width: 120px;
@@ -182,6 +194,10 @@ h3 {
   background-color: #EC994B;
   transition-duration: 0.8s;
   cursor: pointer;
+}
+
+.card-container .show-skills {
+  transform: translateX(0);
 }
 
 .portfolio-container {
@@ -199,6 +215,13 @@ h3 {
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   padding-bottom: 5rem;
+}
+.portfolio-container .img-container .portfolio-cards {
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+}
+.portfolio-container .img-container .portfolio-cards .port {
+  transform: translateX(0);
 }
 .portfolio-container .img-container .portfolio-cards img {
   height: 350px;
@@ -224,6 +247,8 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin: 2rem;
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
 }
 .timeline .left {
   color: rgb(235, 235, 237);
@@ -234,6 +259,14 @@ h3 {
 .timeline .left h2 {
   margin: 0;
   font-family: "Roboto", sans-serif;
+}
+
+.timeline:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.timeline.show {
+  transform: translateX(0);
 }
 
 .right {
@@ -304,6 +337,9 @@ h3 {
 .contact .social .box1 a {
   padding-right: 0.5rem;
 }
+.contact .social .box1 img {
+  width: 70px;
+}
 .contact .social .box2 {
   flex: 0 1 350px;
   text-align: center;
@@ -317,6 +353,9 @@ h3 {
 .contact .social .box2 p {
   padding-right: 0.5rem;
 }
+.contact .social .box2 img {
+  width: 70px;
+}
 .contact .social .box3 {
   flex: 0 1 350px;
   background-color: #222831;
@@ -326,6 +365,9 @@ h3 {
   align-items: center;
   margin: 10px;
   border-radius: 10px;
+}
+.contact .social .box3 img {
+  width: 70px;
 }
 
 .social p,
@@ -434,15 +476,16 @@ footer h2 {
     padding-left: 0;
   }
   .name .bold,
-.name h2,
-.name h3 {
+.name h2 {
     font-size: 1.5rem;
+  }
+  .name h3 {
+    font-size: 1.2rem;
   }
   .name .contact-btn {
     height: 2rem;
-    width: 100px;
-    font-size: 0.7rem;
-    border: 2px solid rgb(255, 200, 107);
+    width: 150px;
+    border: 1px solid rgb(255, 200, 107);
   }
   ul {
     font-size: 1rem;
@@ -521,6 +564,17 @@ footer h2 {
   }
   .box2 p {
     font-size: 0.8rem;
+  }
+  .contact .social .box1,
+.contact .social .box2,
+.contact .social .box3 {
+    flex: 0 1 250px;
+    height: 70px;
+  }
+  .contact .social .box1 img,
+.contact .social .box2 img,
+.contact .social .box3 img {
+    width: 50px;
   }
 }
 @media (max-width: 320px) {
