@@ -183,7 +183,7 @@ h3 {
   background-color: #222831;
   border-radius: 20px;
   transform: translateX(400%);
-  transition: transform 0.4s ease;
+  transition: transform 0.6s ease;
 }
 .card-container .skills-cards img {
   width: 120px;
@@ -217,16 +217,17 @@ h3 {
   padding-bottom: 5rem;
 }
 .portfolio-container .img-container .portfolio-cards {
-  transform: translateX(400%);
-  transition: transform 0.4s ease;
-}
-.portfolio-container .img-container .portfolio-cards .port {
-  transform: translateX(0);
+  transform: translateX(-400%);
+  transition: transform 0.6s ease;
 }
 .portfolio-container .img-container .portfolio-cards img {
   height: 350px;
   width: 350px;
   border-radius: 10px;
+}
+
+.portfolio-container .img-container .portfolio-cards.port {
+  transform: translateX(0);
 }
 
 .experiance {
@@ -248,7 +249,7 @@ h3 {
   grid-template-columns: 1fr 2fr;
   margin: 2rem;
   transform: translateX(400%);
-  transition: transform 0.4s ease;
+  transition: transform 0.6s ease;
 }
 .timeline .left {
   color: rgb(235, 235, 237);

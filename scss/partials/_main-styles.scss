@@ -171,7 +171,7 @@ h3 {
         background-color: $color-primary;
         border-radius: 20px;
         transform: translateX(400%);
-        transition: transform 0.4s ease;
+        transition: transform 0.6s ease;
         img {
             width:120px;
             height: 120px;
@@ -203,11 +203,8 @@ h3 {
         grid-row-gap: 30px;
         padding-bottom: 5rem;
         .portfolio-cards {
-            transform: translateX(400%);
-            transition: transform 0.4s ease;
-            .port {
-                transform: translateX(0);
-            }
+            transform: translateX(-400%);
+            transition: transform 0.6s ease;
             img {
                 height: 350px;
                 width: 350px;
@@ -216,6 +213,9 @@ h3 {
             }
         }
     }
+}
+.portfolio-container .img-container .portfolio-cards.port {
+    transform: translateX(0);
 }
 
 
@@ -240,7 +240,7 @@ h3 {
     grid-template-columns: 1fr 2fr;
     margin: 2rem;
     transform: translateX(400%);
-    transition: transform 0.4s ease;
+    transition: transform 0.6s ease;
     .left {
         color: $color-text;
         font-size: 1.5rem;
