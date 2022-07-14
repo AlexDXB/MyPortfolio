@@ -182,18 +182,13 @@ h3 {
 .card-container .skills-cards {
   background-color: #222831;
   border-radius: 20px;
-  transform: translateX(400%);
+  transform: translateX(600%);
   transition: transform 0.6s ease;
 }
 .card-container .skills-cards img {
   width: 120px;
   height: 120px;
   margin: 2rem;
-}
-.card-container .skills-cards:hover {
-  background-color: #EC994B;
-  transition-duration: 0.8s;
-  cursor: pointer;
 }
 
 .card-container .show-skills {
@@ -217,8 +212,9 @@ h3 {
   padding-bottom: 5rem;
 }
 .portfolio-container .img-container .portfolio-cards {
-  transform: translateX(-400%);
+  transform: translateX(-600%);
   transition: transform 0.6s ease;
+  position: relative;
 }
 .portfolio-container .img-container .portfolio-cards img {
   height: 350px;
@@ -248,7 +244,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin: 2rem;
-  transform: translateX(400%);
+  transform: translateX(600%);
   transition: transform 0.6s ease;
 }
 .timeline .left {
@@ -334,6 +330,7 @@ h3 {
   height: 100px;
   border-radius: 10px;
   align-items: center;
+  justify-content: center;
 }
 .contact .social .box1 a {
   padding-right: 0.5rem;
@@ -350,6 +347,7 @@ h3 {
   margin: 10px;
   align-items: center;
   border-radius: 10px;
+  justify-content: center;
 }
 .contact .social .box2 p {
   padding-right: 0.5rem;
@@ -366,6 +364,7 @@ h3 {
   align-items: center;
   margin: 10px;
   border-radius: 10px;
+  justify-content: center;
 }
 .contact .social .box3 img {
   width: 70px;
@@ -378,10 +377,6 @@ h3 {
   color: rgb(255, 200, 107);
   font-family: "Noto Sans", sans-serif;
   text-decoration: none;
-}
-.social p:hover,
-.social a:hover {
-  transform: scale(1.1);
 }
 
 .icons-bottom {
