@@ -500,12 +500,34 @@ footer h2 {
     font-size: 2rem;
   }
 }
+@media (max-width: 630px) {
+  .card-container {
+    grid-template-columns: repeat(2, 220px);
+    grid-template-rows: repeat(5, 220px);
+  }
+  .card-container .skills-cards img {
+    width: 60px;
+    height: 60px;
+    margin: 0.5rem 0 0 0;
+  }
+  .card-container .skills-cards h3 {
+    font-size: 1.5rem;
+  }
+  .portfolio-container .img-container {
+    grid-template-columns: repeat(2, 220px);
+    grid-template-rows: repeat(3, 220px);
+  }
+  .portfolio-container .img-container .portfolio-cards img {
+    height: 220px;
+    width: 220px;
+  }
+}
 @media (max-width: 580px) {
   footer h2 {
     font-size: 1.5rem;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 530px) {
   .contact,
 .about-container {
     padding: 2rem 0 0 0.2rem;
@@ -538,8 +560,8 @@ footer h2 {
     height: 700px;
   }
   .card-container {
-    grid-template-columns: repeat(2, 200px);
-    grid-template-rows: repeat(5, 200px);
+    grid-template-columns: repeat(2, 140px);
+    grid-template-rows: repeat(5, 140px);
     padding: 0;
   }
   .card-container .skills-cards img {
@@ -562,16 +584,20 @@ footer h2 {
     color: rgb(129, 130, 131);
   }
   .portfolio-container .img-container {
-    grid-template-columns: repeat(2, 200px);
-    grid-template-rows: repeat(3, 200px);
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(3, 150px);
   }
   .portfolio-container .img-container .portfolio-cards img {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
   }
   .overlay .links a {
     font-size: 0.8rem;
-    width: 50px;
+    width: 30px;
+    margin: 5px;
+  }
+  .overlay p {
+    font-size: 0.8rem;
   }
   .experiance {
     padding: 2rem 0 2rem 0.2rem;
