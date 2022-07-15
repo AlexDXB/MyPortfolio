@@ -91,6 +91,7 @@ h3 {
     height: 4rem;
     font-family: $font-stack-primary;
     text-decoration: none;
+    margin-bottom: 1rem;
     h3 {
         font-size: 1.8rem;
         margin: auto;
@@ -207,6 +208,52 @@ h3 {
         }
     }
 }
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    color: white;
+    background: black;
+    opacity: 0;
+    transition: .2s opacity ease-in;
+    border-radius: 9px;
+    .links a {
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: $color-text;
+        margin: 10px;
+        border: 1px solid $color-bright;
+        padding: 10px;
+        border-radius:5px;
+        width: 100px;
+        display: inline-block;
+        font-family: $font-stack-primary;
+        &:hover {
+            background-color:#EC994B;
+            color: white;
+        }
+    }
+    p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        font-family: $font-stack-primary;
+    }
+        
+        
+    
+}
+  .portfolio-cards:hover .overlay {
+    opacity: 0.8;
+  }
+  
 .portfolio-container .img-container .portfolio-cards.port {
     transform: translateX(0);
 }
@@ -425,8 +472,8 @@ footer {
 
 @media (max-width:864px) {
     .card-container {
-        grid-template-columns: repeat(2,150px);
-        grid-template-rows: repeat(5,150px);
+        grid-template-columns: repeat(2,250px);
+        grid-template-rows: repeat(5,250px);
         .skills-cards img {
             width: 60px;
             height: 60px;
@@ -438,11 +485,11 @@ footer {
         }
     }
     .portfolio-container .img-container {
-        grid-template-columns: repeat(2, 200px);
-        grid-template-rows: repeat(3,200px);
+        grid-template-columns: repeat(2, 250px);
+        grid-template-rows: repeat(3,250px);
         .portfolio-cards img {
-            height: 200px;
-            width: 200px;
+            height: 250px;
+            width: 250px;
         }
     }
     footer h2{
@@ -456,7 +503,7 @@ footer {
         font-size: 1.5rem;
     }
 }
-@media (max-width:530px) {
+@media (max-width:650px) {
     .contact,
     .about-container {
         padding: 2rem 0 0 .2rem;
@@ -491,8 +538,8 @@ footer {
         height: 700px;
     }
     .card-container {
-        grid-template-columns: repeat(2,140px);
-        grid-template-rows: repeat(5,140px);
+        grid-template-columns: repeat(2,200px);
+        grid-template-rows: repeat(5,200px);
         padding: 0;
         .skills-cards img {
             width: 60px;
@@ -516,12 +563,16 @@ footer {
         color: $color-text-secondary;
     }
     .portfolio-container .img-container {
-        grid-template-columns: repeat(2, 150px);
-        grid-template-rows: repeat(3,150px);
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(3,200px);
         .portfolio-cards img {
-            height: 150px;
-            width: 150px;
+            height: 200px;
+            width: 200px;
         }
+    }
+    .overlay .links a {
+        font-size: 0.8rem;
+        width: 50px;
     }
    
     .experiance {
@@ -594,6 +645,15 @@ footer {
             height: 100px;
             width: 100px;
         }
+    }
+    .overlay .links a {
+        font-size: 0.4rem;
+        width: 20px;
+        height: 10px;
+        margin: 0;
+    }
+    .overlay p {
+        font-size: 0.5rem;
     }
 }
     
