@@ -14,9 +14,7 @@ function checkSkills() {
         // show the box when its further down the page then the 80% from the top
         if(boxTop < triggerBottom) {
             skill.classList.add('show-skills')
-        } else {
-            skill.classList.remove('show-skills')
-        }
+        } 
     })
 }
 
@@ -34,9 +32,7 @@ function checkPortfolio() {
         // show the box when its further down the page then the 80% from the top
         if(boxTop < triggerBottom) {
             port.classList.add('port')
-        } else {
-            port.classList.remove('port')
-        }
+        } 
     })
 }
 
@@ -54,9 +50,7 @@ function checkBoxes() {
         // show the box when its further down the page then the 80% from the top
         if(boxTop < triggerBottom) {
             box.classList.add('show')
-        } else {
-            box.classList.remove('show')
-        }
+        } 
     })
 }
 
