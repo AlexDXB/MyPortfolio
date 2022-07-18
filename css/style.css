@@ -281,7 +281,7 @@ h3 {
   display: inline-block;
   font-family: "Roboto", sans-serif;
 }
-.overlay .links a:hover {
+.overlay .links a:hover, .overlay .links a:active {
   background-color: #E04D01;
   color: white;
 }
