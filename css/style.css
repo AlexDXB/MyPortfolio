@@ -74,6 +74,7 @@ ul li a:hover {
 
 .name .bold {
   font-size: 1.5rem;
+  color: rgb(255, 200, 107);
 }
 
 ul {
@@ -102,7 +103,7 @@ ul {
   align-items: center;
 }
 .name h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: rgb(235, 235, 237);
   font-family: "Roboto", sans-serif;
 }
@@ -115,15 +116,6 @@ ul {
   margin-bottom: 1rem;
   align-items: center;
   justify-content: center;
-}
-
-.name .bold,
-.name h2 {
-  font-size: 1.5rem;
-}
-
-.bold {
-  color: rgb(255, 200, 107);
 }
 
 h3 {
@@ -165,8 +157,8 @@ h3 {
 .card-container {
   display: grid;
   max-width: 100%;
-  grid-template-columns: repeat(2, 100px);
-  grid-template-rows: repeat(5, 100px);
+  grid-template-columns: repeat(2, 120px);
+  grid-template-rows: repeat(5, 120px);
   margin: 0 auto;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
@@ -200,8 +192,8 @@ h3 {
 .portfolio-container .img-container {
   display: grid;
   max-width: 100%;
-  grid-template-columns: repeat(3, 150px);
-  grid-template-rows: repeat(2, 150px);
+  grid-template-columns: repeat(2, 120px);
+  grid-template-rows: repeat(3, 120px);
   margin: 0 auto;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
@@ -213,8 +205,8 @@ h3 {
   position: relative;
 }
 .portfolio-container .img-container .portfolio-cards img {
-  height: 150px;
-  width: 150px;
+  height: 120px;
+  width: 120px;
   border-radius: 10px;
 }
 
@@ -243,15 +235,6 @@ h3 {
   text-align: center;
 }
 
-.portfolio-container .img-container {
-  grid-template-columns: repeat(2, 100px);
-  grid-template-rows: repeat(3, 100px);
-}
-.portfolio-container .img-container .portfolio-cards img {
-  height: 100px;
-  width: 100px;
-}
-
 .overlay {
   position: absolute;
   top: 0;
@@ -269,14 +252,14 @@ h3 {
   border-radius: 9px;
 }
 .overlay .links a {
-  font-size: 0.4rem;
+  font-size: 0.6rem;
   text-decoration: none;
   color: rgb(235, 235, 237);
-  margin: 0;
+  margin: 5px;
   border: 1px solid rgb(255, 200, 107);
   padding: 5px;
   border-radius: 5px;
-  width: 20px;
+  width: 30px;
   height: fit-content;
   display: inline-block;
   font-family: "Roboto", sans-serif;
@@ -286,7 +269,7 @@ h3 {
   color: white;
 }
 .overlay p {
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   margin-bottom: 2rem;
   font-family: "Roboto", sans-serif;
 }
@@ -389,7 +372,7 @@ h3 {
   max-width: 100%;
   margin: 0 auto;
 }
-.contact .social .box1 {
+.contact .social .box1, .contact .social .box2, .contact .social .box3 {
   flex: 0 1 250px;
   margin: 10px;
   text-align: center;
@@ -399,38 +382,7 @@ h3 {
   align-items: center;
   justify-content: center;
 }
-.contact .social .box1 a {
-  padding-right: 0.5rem;
-}
-.contact .social .box1 img {
-  width: 50px;
-}
-.contact .social .box2 {
-  flex: 0 1 250px;
-  text-align: center;
-  display: flex;
-  height: 50px;
-  margin: 10px;
-  align-items: center;
-  justify-content: center;
-}
-.contact .social .box2 p {
-  padding-right: 0.5rem;
-}
-.contact .social .box2 img {
-  width: 50px;
-}
-.contact .social .box3 {
-  flex: 0 1 250px;
-  text-align: center;
-  display: flex;
-  height: 50px;
-  align-items: center;
-  margin: 10px;
-  border-radius: 10px;
-  justify-content: center;
-}
-.contact .social .box3 img {
+.contact .social .box1 img, .contact .social .box2 img, .contact .social .box3 img {
   width: 50px;
 }
 
@@ -472,62 +424,14 @@ footer h2 {
   font-size: 1.5rem;
 }
 
-@media (min-width: 480px) {
-  .contact,
-.about-container {
-    padding: 2rem 0 1rem 0.2rem;
-  }
-  .main-container .nav-container,
-.icons-bottom {
-    padding-left: 0;
-  }
-  .name .bold,
-.name h2 {
-    font-size: 1.5rem;
-  }
-  .name h3 {
-    font-size: 1.2rem;
-  }
-  .name .contact-btn {
-    height: 2rem;
-    width: 150px;
-    border: 1px solid rgb(255, 200, 107);
-  }
-  ul {
-    font-size: 1rem;
-  }
-  .iam .main-img {
-    max-width: 250px;
-    margin: 0;
-    margin-top: 70px;
-    padding-left: 110px;
-  }
-  .main-container {
-    height: 700px;
-  }
+@media (min-width: 390px) {
   .card-container {
-    grid-template-columns: repeat(2, 140px);
-    grid-template-rows: repeat(5, 140px);
-    padding: 0;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(5, 150px);
   }
   .card-container .skills-cards img {
     width: 60px;
     height: 60px;
-    margin: 0.5rem 0 0 0;
-  }
-  .card-container .skills-cards h3 {
-    font-size: 1.1rem;
-  }
-  .about-text h1,
-.sills-text h1,
-.portfolio-text h1,
-.contact h1,
-.experiance h1 {
-    font-size: 2rem;
-  }
-  .about-text p {
-    font-size: 1rem;
-    color: rgb(129, 130, 131);
   }
   .portfolio-container .img-container {
     grid-template-columns: repeat(2, 150px);
@@ -537,23 +441,70 @@ footer h2 {
     height: 150px;
     width: 150px;
   }
-  .overlay .links a {
-    font-size: 0.8rem;
-    width: 30px;
-    margin: 5px;
+  .iam .main-img {
+    padding-left: 80px;
   }
   .overlay p {
     font-size: 0.8rem;
   }
+  .overlay .links a {
+    font-size: 0.9rem;
+    width: 40px;
+  }
+}
+@media (min-width: 480px) {
+  .contact,
+.about-container {
+    padding: 2rem 0 1rem 0.2rem;
+  }
+  .main-container .nav-container,
+.icons-bottom {
+    padding-left: 0;
+  }
+  .name h3 {
+    font-size: 1.2rem;
+  }
+  .name .contact-btn {
+    height: 2rem;
+    width: 150px;
+    border: 1px solid rgb(255, 200, 107);
+  }
+  .iam .main-img {
+    padding-left: 110px;
+  }
+  .card-container {
+    grid-template-columns: repeat(2, 170px);
+    grid-template-rows: repeat(5, 170px);
+  }
+  .card-container .skills-cards img {
+    width: 60px;
+    height: 60px;
+  }
+  .card-container .skills-cards h3 {
+    font-size: 1.3rem;
+  }
+  .about-text p {
+    font-size: 1.4rem;
+  }
+  .portfolio-container .img-container {
+    grid-template-columns: repeat(2, 170px);
+    grid-template-rows: repeat(3, 170px);
+  }
+  .portfolio-container .img-container .portfolio-cards img {
+    height: 170px;
+    width: 170px;
+  }
+  .overlay .links a {
+    font-size: 1rem;
+    width: 40px;
+    margin: 5px;
+    height: fit-content;
+  }
+  .overlay p {
+    font-size: 1rem;
+  }
   .experiance {
     padding: 2rem 0 2rem 0.2rem;
-  }
-  .experiance h1 {
-    top: -10px;
-  }
-  .timeline {
-    margin: 2rem 0;
-    grid-template-columns: 1fr 3fr;
   }
   .timeline .right {
     padding: 0 1.5rem;
@@ -564,33 +515,15 @@ footer h2 {
   .timeline .right h3 {
     font-size: 1.5rem;
   }
-  .timeline .right p {
-    font-size: 1rem;
-  }
-  .timeline .left {
-    padding: 0 1.5rem 0 0;
-    min-width: 85px;
-  }
   .timeline .left h2 {
     font-size: 1.5rem;
   }
   .box1 a,
 .box3 p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .box2 p {
-    font-size: 0.8rem;
-  }
-  .contact .social .box1,
-.contact .social .box2,
-.contact .social .box3 {
-    flex: 0 1 250px;
-    height: 70px;
-  }
-  .contact .social .box1 img,
-.contact .social .box2 img,
-.contact .social .box3 img {
-    width: 50px;
+    font-size: 1rem;
   }
 }
 @media (min-width: 580px) {
@@ -601,7 +534,6 @@ footer h2 {
   .card-container .skills-cards img {
     width: 100px;
     height: 100px;
-    margin: 0.5rem 0 0 0;
   }
   .card-container .skills-cards h3 {
     font-size: 1.5rem;
@@ -635,25 +567,23 @@ footer h2 {
     margin: 0;
   }
   .overlay .links a {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     width: 50px;
-    margin: 5px;
-    height: fit-content;
   }
   .overlay p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   .card-container {
     grid-template-columns: repeat(2, 300px);
-    grid-template-rows: 5, 300px;
+    grid-template-rows: repeat(5, 300px);
     margin-bottom: 3rem;
   }
   .card-container .skills-cards img {
-    width: 110px;
-    height: 110px;
+    width: 150px;
+    height: 150px;
   }
   .card-container .skills-cards h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   .portfolio-container .img-container {
     grid-template-columns: repeat(2, 350px);
@@ -690,38 +620,21 @@ footer h2 {
   }
   .name h2 {
     font-size: 2.2rem;
-    color: rgb(235, 235, 237);
-    font-family: "Roboto", sans-serif;
   }
   .name a {
-    display: flex;
     font-size: 2rem;
-    padding: 0.3rem;
-    align-items: center;
-    justify-content: center;
   }
   .name .bold {
     font-size: 3.3rem;
-    color: rgb(255, 200, 107);
   }
   .name h3 {
     font-size: 2.2rem;
   }
   .name .contact-btn {
-    background-color: transparent;
-    color: rgb(255, 200, 107);
     border: 5px solid rgb(255, 200, 107);
     border-radius: 10px;
     width: 230px;
-    font-family: "Roboto", sans-serif;
-    text-decoration: none;
     margin-bottom: 1rem;
-  }
-  .name .contact-btn:hover {
-    color: #222831;
-    background-color: rgb(255, 200, 107);
-    transition-duration: 0.8s;
-    cursor: pointer;
   }
   .about-container {
     padding: 4rem;
@@ -734,19 +647,6 @@ footer h2 {
   }
   .about-text p {
     font-size: 1.5rem;
-  }
-  .linebeforetext {
-    display: flex;
-    justify-content: space-between;
-  }
-  .linebeforetext p {
-    flex: 1 1 auto;
-    margin-top: 0;
-  }
-  .linebeforetext .line2 {
-    flex: 0 0 60px;
-    border-top: 3px solid rgb(255, 200, 107);
-    margin-right: 10px;
   }
   .card-container {
     grid-template-columns: repeat(3, 280px);
@@ -778,21 +678,14 @@ footer h2 {
     font-size: 1.5rem;
   }
   .experiance h1 {
-    margin-top: 0;
     font-size: 3.3rem;
   }
   .timeline {
-    display: grid;
     grid-template-columns: 1fr 2fr;
     margin: 2rem;
   }
-  .timeline .left {
-    font-size: 1.5rem;
-  }
   .timeline .right {
     padding: 0 3rem;
-    border-left: 2px solid rgb(235, 235, 237);
-    position: relative;
   }
   .timeline .right h2 {
     font-size: 2.3rem;
@@ -807,59 +700,21 @@ footer h2 {
     padding: 0;
   }
   .contact {
-    background: linear-gradient(to bottom, #393E46, #222831);
     padding: 4rem;
   }
   .contact h1 {
     font-size: 3.3rem;
   }
-  .contact .social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  .contact .social .box1 {
+  .contact .social .box1, .contact .social .box2, .contact .social .box3 {
     flex: 0 1 350px;
-    margin: 10px;
-    text-align: center;
-    align-self: center;
-    display: flex;
     height: 100px;
   }
-  .contact .social .box1 img {
-    width: 70px;
-  }
-  .contact .social .box2 {
-    flex: 0 1 350px;
-    text-align: center;
-    display: flex;
-    height: 100px;
-    margin: 10px;
-    align-items: center;
-  }
-  .contact .social .box2 img {
-    width: 70px;
-  }
-  .contact .social .box3 {
-    flex: 0 1 350px;
-    text-align: center;
-    display: flex;
-    height: 100px;
-    align-items: center;
-    margin: 10px;
-  }
-  .contact .social .box3 img {
+  .contact .social .box1 img, .contact .social .box2 img, .contact .social .box3 img {
     width: 70px;
   }
   .social p,
 .social a {
-    margin-left: 1rem;
     font-size: 1.4rem;
-    color: rgb(255, 200, 107);
-    font-family: "Noto Sans", sans-serif;
-    text-decoration: none;
   }
   footer {
     height: 200px;

@@ -66,6 +66,7 @@ ul {
 }
 .name .bold{
     font-size: 1.5rem;
+    color:$color-bright;
 }
 ul {
     font-size: 1rem;
@@ -90,7 +91,7 @@ ul {
     flex-direction: column;
     align-items: center;
     h2 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         color:$color-text;
         font-family: $font-stack-primary;
     }
@@ -103,17 +104,9 @@ ul {
         margin-bottom: 1rem;
         align-items: center;
         justify-content: center;
-        
     }
 }
-.name .bold,
-.name h2{
-    font-size: 1.5rem;
-}
-.bold {
-    color:$color-bright;
-}
-h3 {
+ h3 {
     color:$color-text;
     font-family: $font-stack-primary;
 } 
@@ -148,8 +141,8 @@ h3 {
 .card-container {
     display: grid;
     max-width: 100%;
-    grid-template-columns: repeat(2, 100px);
-    grid-template-rows: repeat(5,100px);
+    grid-template-columns: repeat(2, 120px);
+    grid-template-rows: repeat(5,120px);
     margin: 0 auto;
     grid-column-gap: 30px;
     grid-row-gap: 30px;
@@ -180,8 +173,8 @@ h3 {
     .img-container {
         display: grid;
         max-width: 100%;
-        grid-template-columns: repeat(3, 150px);
-        grid-template-rows: repeat(2,150px);
+        grid-template-columns: repeat(2, 120px);
+        grid-template-rows: repeat(3,120px);
         margin: 0 auto;
         grid-column-gap: 30px;
         grid-row-gap: 30px;
@@ -191,8 +184,8 @@ h3 {
             transition: transform 0.6s ease;
             position: relative;
             img {
-                height: 150px;
-                width: 150px;
+                height: 120px;
+                width: 120px;
                 border-radius: 10px;
             }
         }
@@ -224,14 +217,7 @@ font-size: 2rem;
     text-align: center;
 }
    
-.portfolio-container .img-container {
-        grid-template-columns: repeat(2, 100px);
-        grid-template-rows: repeat(3,100px);
-        .portfolio-cards img {
-            height: 100px;
-            width: 100px;
-        }
-}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -248,14 +234,14 @@ font-size: 2rem;
     transition: .2s opacity ease-in;
     border-radius: 9px;
     .links a {
-        font-size: 0.4rem;
+        font-size: 0.6rem;
         text-decoration: none;
         color: $color-text;
-        margin: 0;
+        margin: 5px;
         border: 1px solid $color-bright;
         padding: 5px;
         border-radius:5px;
-        width: 20px;
+        width: 30px;
         height: fit-content;
         display: inline-block;
         font-family: $font-stack-primary;
@@ -266,7 +252,7 @@ font-size: 2rem;
         }
     }
     p {
-        font-size: 0.5rem;
+        font-size: 0.8rem;
         margin-bottom: 2rem;
         font-family: $font-stack-primary;
     }  
@@ -366,7 +352,7 @@ font-size: 2rem;
             align-items:center;
             max-width: 100%;
             margin: 0 auto;
-            .box1 {
+            .box1, .box2, .box3 {
                 flex: 0 1 250px;
                 margin:10px;
                 text-align: center;
@@ -374,38 +360,6 @@ font-size: 2rem;
                 display: flex;
                 height: 50px;
                 align-items:center;
-                justify-content: center;
-                a {
-                padding-right: .5rem;
-                }
-                img {
-                    width: 50px;
-                }
-            }
-            .box2 {
-                flex: 0 1 250px;
-                text-align: center;
-                display: flex;
-                height: 50px;
-                margin:10px;
-                align-items:center;
-                justify-content: center;
-                p {
-                    padding-right: .5rem;
-                    
-                }
-                img {
-                    width: 50px;
-                }
-            }
-            .box3{
-                flex: 0 1 250px;
-                text-align: center;
-                display: flex;
-                height: 50px;
-                align-items:center;
-                margin:10px;
-                border-radius: 10px;
                 justify-content: center;
                 img {
                     width: 50px;
@@ -450,6 +404,41 @@ footer {
     }
 }
 
+///////////////////////// MEDIA /////////////////////////
+/// 
+/// 
+/// 
+
+
+@media (min-width:390px) {
+    .card-container {
+        grid-template-columns: repeat(2,150px);
+        grid-template-rows: repeat(5,150px);
+        .skills-cards img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+    .portfolio-container .img-container {
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: repeat(3,150px);
+        .portfolio-cards img {
+            height: 150px;
+            width: 150px;
+        }
+    }
+    .iam .main-img {
+        padding-left: 80px;
+    }
+    .overlay p {
+        font-size: 0.8rem;
+    }
+    .overlay .links a {
+        font-size: 0.9rem;
+        width: 40px;
+    } 
+}
+
     @media (min-width:480px) {
         .contact,
         .about-container {
@@ -459,10 +448,6 @@ footer {
         .icons-bottom {
             padding-left: 0;
         }
-        .name .bold,
-        .name h2{
-            font-size: 1.5rem;
-        }
         .name h3 {
             font-size: 1.2rem;
         }
@@ -471,67 +456,44 @@ footer {
             width:150px;
             border: 1px solid $color-bright;
         }
-        ul {
-            font-size: 1rem;
-        }
         .iam .main-img {
-            max-width: 250px;
-            margin: 0;
-            margin-top: 70px;
             padding-left: 110px;
         }
-        .main-container {
-            height: 700px;
-        }
         .card-container {
-            grid-template-columns: repeat(2,140px);
-            grid-template-rows: repeat(5,140px);
-            padding: 0;
+            grid-template-columns: repeat(2,170px);
+            grid-template-rows: repeat(5,170px);
             .skills-cards img {
                 width: 60px;
                 height: 60px;
-                margin: .5rem 0 0 0;
             }
             .skills-cards h3 {
-                font-size: 1.1rem; 
+                font-size: 1.3rem; 
             } 
         } 
-        .about-text h1,
-        .sills-text h1,
-        .portfolio-text h1,
-        .contact h1,
-        .experiance h1{
-        font-size: 2rem;
-        }
         .about-text p {
-            font-size: 1rem;
-            color: $color-text-secondary;
+            font-size: 1.4rem;
         }
         .portfolio-container .img-container {
-            grid-template-columns: repeat(2, 150px);
-            grid-template-rows: repeat(3,150px);
+            grid-template-columns: repeat(2, 170px);
+            grid-template-rows: repeat(3,170px);
             .portfolio-cards img {
-                height: 150px;
-                width: 150px;
+                height: 170px;
+                width: 170px;
             }
         }
         .overlay .links a {
-            font-size: 0.8rem;
-            width: 30px;
+            font-size: 1rem;
+            width: 40px;
             margin: 5px;
+            height: fit-content;
         }
         .overlay p {
-            font-size: .8rem;
+            font-size: 1rem;
         }
         .experiance {
             padding:2rem 0 2rem 0.2rem;
-            h1 {
-                top: -10px;
-            }
         }
         .timeline {
-            margin: 2rem 0;
-            grid-template-columns: 1fr 3fr;
             .right {
                 padding: 0 1.5rem;
                 h2 {
@@ -540,13 +502,8 @@ footer {
                 h3 {
                     font-size: 1.5rem;
                 }
-                p {
-                    font-size: 1rem;
-                }
             }
             .left {
-                padding: 0 1.5rem 0 0;
-                min-width: 85px;
                 h2 {
                     font-size: 1.5rem;
                 }
@@ -554,19 +511,10 @@ footer {
         }
         .box1 a,
         .box3 p {
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
         .box2 p {
-            font-size: .8rem;
-        }
-        .contact .social .box1,
-        .contact .social .box2, 
-        .contact .social .box3 {
-            flex: 0 1 250px;
-            height: 70px;
-            img {
-                width: 50px;
-            }
+            font-size: 1rem;
         }
     }
     @media (min-width:580px) {
@@ -576,7 +524,6 @@ footer {
             .skills-cards img {
                 width: 100px;
                 height: 100px;
-                margin: .5rem 0 0 0;
             }
             .skills-cards h3 {
                 font-size: 1.5rem;
@@ -611,24 +558,23 @@ footer {
             }
         }
         .overlay .links a {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             width: 50px;
-            margin: 5px;
-            height: fit-content;
+            
         }
         .overlay p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
         .card-container {
             grid-template-columns: repeat(2,300px);
-            grid-template-rows: (5,300px);
+            grid-template-rows: repeat(5,300px);
             margin-bottom: 3rem;
             .skills-cards img {
-                width: 110px;
-                height: 110px; 
+                width: 150px;
+                height: 150px; 
             }
             .skills-cards h3 {
-                font-size: 1.5rem;
+                font-size: 1.7rem;
             }
         }
         .portfolio-container .img-container {
@@ -667,39 +613,22 @@ footer {
         align-items: flex-start;
         h2 {
             font-size: 2.2rem;
-            color:$color-text;
-            font-family: $font-stack-primary;
         }
         a {
-          display: flex;
           font-size: 2rem;
-          padding: 0.3rem;
-          align-items: center;
-          justify-content: center;
         }
         .bold {
             font-size: 3.3rem;
-            color:$color-bright;
         }
         h3 {
             font-size: 2.2rem;
         }
     }
-   .name .contact-btn {
-        background-color: transparent;
-        color:$color-bright;
+   .name .contact-btn { 
         border: 5px solid $color-bright;
         border-radius: 10px;
         width: 230px;
-        font-family: $font-stack-primary;
-        text-decoration: none;
         margin-bottom: 1rem;
-        &:hover {
-            color:$color-primary;
-            background-color:$color-bright;
-            transition-duration: 0.8s;
-            cursor: pointer;
-        }
 }
   
 
@@ -717,19 +646,7 @@ footer {
     .about-text p{
         font-size: 1.5rem;
     }
-    .linebeforetext {
-        display: flex;
-        justify-content:space-between;
-        p {
-            flex: 1 1 auto;
-            margin-top: 0;
-        }
-        .line2 {
-            flex: 0 0 60px;
-            border-top: 3px solid $color-bright;
-            margin-right: 10px;
-        }
-    }
+    
     //////////////////////////////// MY SKILLS //////////////////////////
 
     .card-container {
@@ -769,22 +686,14 @@ footer {
     }
     ////////////////////////// Experiance /////////////////////////
     .experiance h1 {
-        margin-top: 0;
         font-size: 3.3rem;
     }
     .timeline{
-        display: grid;
         grid-template-columns: 1fr 2fr;
         margin: 2rem;
-       
-        .left {
-            font-size: 1.5rem;
-        }
     }
    .timeline .right {
         padding: 0 3rem;
-        border-left: 2px solid $color-text;
-        position: relative;
         h2 {
             font-size: 2.3rem;
             margin: 0;
@@ -801,60 +710,24 @@ footer {
     
     //////////////////////////// Contact Me /////////////////
     .contact{
-        background: linear-gradient(to bottom,$color-secondary ,$color-primary);
         padding: 4rem;
         h1 {
             font-size: 3.3rem;
 
         }
         .social {
-            display: flex;
-            justify-content:center;
-            align-items:center;
-            max-width: 100%;
-            margin: 0 auto;
-            .box1 {
+            .box1, .box2, .box3 {
                 flex: 0 1 350px;
-                margin:10px;
-                text-align: center;
-                align-self:center;
-                display: flex;
                 height: 100px;
                 img {
                     width: 70px;
                 }
-            }
-            .box2 {
-                flex: 0 1 350px;
-                text-align: center;
-                display: flex;
-                height: 100px;
-                margin:10px;
-                align-items:center;
-                img {
-                    width: 70px;
-                }
-            }
-            .box3{
-                flex: 0 1 350px;
-                text-align: center;
-                display: flex;
-                height: 100px;
-                align-items:center;
-                margin:10px;
-                img {
-                    width: 70px;
-                }
-            }
+            } 
         }
     }
     .social p,
     .social a {
-        margin-left: 1rem;
         font-size: 1.4rem;
-        color:$color-bright;
-        font-family: 'Noto Sans', sans-serif;
-        text-decoration: none;
     }
     footer {
         height:200px;
